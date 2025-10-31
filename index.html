@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkNex - Slot Booking</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="logo">ParkNex</div>
+        <div class="subtitle">Smart Parking Management</div>
+
+        <!-- Loading Screen -->
+        <div id="loadingScreen">
+            <div class="loading-spinner"></div>
+            <h2>Verifying Your Location...</h2>
+            <p class="message">Please allow location access when your browser asks</p>
+            
+            <div class="info-box">
+                <p><strong>📍 Location permission required</strong></p>
+                <p>We need to confirm you're at the parking facility to prevent unauthorized remote bookings.</p>
+            </div>
+        </div>
+
+        <!-- Redirecting Screen -->
+        <div id="redirectingScreen" class="hidden">
+            <div class="status-icon success-icon">✓</div>
+            <h2>Verification Complete!</h2>
+            <p class="message">Redirecting you to WhatsApp...</p>
+            
+            <div class="slot-info">
+                <div class="slot-info-item">
+                    <span class="slot-info-label">Slot ID</span>
+                    <span class="slot-info-value" id="slotIdDisplay">-</span>
+                </div>
+                <div class="slot-info-item">
+                    <span class="slot-info-label">Slot Name</span>
+                    <span class="slot-info-value" id="slotNameDisplay">-</span>
+                </div>
+                <div class="slot-info-item">
+                    <span class="slot-info-label">Token</span>
+                    <span class="slot-info-value" id="tokenDisplay">-</span>
+                </div>
+                <div class="slot-info-item">
+                    <span class="slot-info-label">Building</span>
+                    <span class="slot-info-value" id="buildingDisplay">-</span>
+                </div>
+            </div>
+
+            <div class="loading-spinner"></div>
+        </div>
+
+        <!-- Error Screen -->
+        <div id="errorScreen" class="hidden">
+            <div class="status-icon error-icon">✕</div>
+            <h2 id="errorTitle">Booking Failed</h2>
+            <p class="message" id="errorMessage">Something went wrong</p>
+            
+            <div class="error-details" id="errorDetails">
+                <p id="errorDetailsText"></p>
+            </div>
+
+            <button class="btn btn-secondary" onclick="window.location.reload()">Try Again</button>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
