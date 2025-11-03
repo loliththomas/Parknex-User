@@ -6,7 +6,7 @@ let slotData = null;
 // Configuration - UPDATE THESE VALUES
 const API_BASE_URL = "https://localhost:7043/api"; // Your .NET API URL
 const RADIUS_THRESHOLD_METERS = 150;
-const WHATSAPP_BOT_NUMBER = "919876543210"; // Replace with your WhatsApp bot number
+const WHATSAPP_BOT_NUMBER = "+14155238886"; // Replace with your WhatsApp bot number
 
 // Get slot ID from URL parameter
 function getSlotIdFromURL() {
