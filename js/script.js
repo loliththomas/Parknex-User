@@ -4,7 +4,7 @@ let userLocation = null;
 let slotData = null;
 
 // Configuration - UPDATE THESE VALUES
-const API_BASE_URL = "http://parknex-admin.runasp.net/api"; // Your .NET API URL
+const API_BASE_URL = "https://parknex-admin.runasp.net/api/Slot/verify"; // Your .NET API URL
 const RADIUS_THRESHOLD_METERS = 150;
 const WHATSAPP_BOT_NUMBER = "+14155238886"; // Replace with your WhatsApp bot number
 
@@ -162,7 +162,8 @@ function redirectToWhatsApp(data) {
   // Create WhatsApp link with prefilled message
   // Message format: "Book {slotId} {slotName} {token}"
   const message = encodeURIComponent(
-    `Book ${data.slotId} ${data.slotName} ${data.token}`
+  `Book Slot ${data.slotName}
+   OTP : ${data.token}`
   );
   const whatsappUrl = `https://wa.me/${WHATSAPP_BOT_NUMBER}?text=${message}`;
 
