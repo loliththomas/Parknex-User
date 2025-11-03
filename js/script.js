@@ -162,7 +162,7 @@ function redirectToWhatsApp(data) {
   // Create WhatsApp link with prefilled message
   // Message format: "Book {slotId} {slotName} {token}"
   const message = encodeURIComponent(
-    `Book Slot ${data.slotName} \n OTP : ${data.token}`
+    `Book ${data.slotName} \nOTP : ${data.token}`
   );
   const whatsappUrl = `https://wa.me/${WHATSAPP_BOT_NUMBER}?text=${message}`;
 
