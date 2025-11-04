@@ -149,7 +149,6 @@ function redirectToWhatsApp(data) {
   slotData = data;
 
   // Update display briefly before redirecting
-  document.getElementById("slotIdDisplay").textContent = data.slotId;
   document.getElementById("slotNameDisplay").textContent = data.slotName;
   document.getElementById("tokenDisplay").textContent = data.token;
   document.getElementById("buildingDisplay").textContent = data.buildingName;
